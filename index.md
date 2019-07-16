@@ -58,18 +58,22 @@ IBM CloudとIKSクラスタの操作に必要なCLIツールのセットアッ�
     > Windows PowerShell アイコンを右クリックして、 **管理者として実行** を選択します。
 
 
-2. インストールが正常に成功しているかの確認を行ってください
+2. インストールが正常に成功しているか確認を行ってください
    * ibmcloud
      * コマンド
        ```
        ibmcloud --version
        ```
-
+       
        > 出力結果例
+       
+       ```
+       ibmcloud version 0.16.3+68cb57c-2019-06-20T09:16:21+00:00
+       ```
 
-       ```
-       ibmcloud version 0.15.0+1bfd374-2019-04-01T03:00:47+00:00
-       ```
+     * 確認内容
+     
+       バージョンの確認: 0.16.0 以上
 
      * 正常に成功していない場合の対策
 
@@ -90,6 +94,10 @@ IBM CloudとIKSクラスタの操作に必要なCLIツールのセットアッ�
        container-registry                     0.1.380             < これ 
        container-service/kubernetes-service   0.2.102             < これ 
        ```
+
+     * 確認内容
+     
+       Container-registory と kubernetes-service のプラグインがリストに表示されること
 
      * 正常に成功していない場合の対策
 
@@ -115,12 +123,44 @@ IBM CloudとIKSクラスタの操作に必要なCLIツールのセットアッ�
        > 出力結果例
 
        ```
-       kubectl version --clientClient Version: version.Info{Major:"1", Minor:"13", GitVersion:"v1.13.1", GitCommit:"eec55b9ba98609a46fee712359c7b5b365bdd920", GitTreeState:"clean", BuildDate:"2018-12-13T19:44:19Z", GoVersion:"go1.11.2", Compiler:"gc", Platform:"darwin/amd64"}
+       Client Version: version.Info{Major:"1", Minor:"15", GitVersion:"v1.15.0", GitCommit:"e8462b5b5dc2584fdcd18e6bcfe9f1e4d970a529", GitTreeState:"clean", BuildDate:"2019-06-20T04:49:16Z", GoVersion:"go1.12.6", Compiler:"gc", Platform:"darwin/amd64"}
        ```
+
+
+     * 確認内容
+     
+       バージョンの確認: **Major:"1", Minor:"14"** 以上
+
 
      * 正常に成功していない場合の対策
 
        * https://kubernetes.io/docs/tasks/tools/install-kubectl/ を参照し、個別にインストールしてください
+
+
+   * helm
+
+     * コマンド
+
+       ```
+       $ helm version --client
+       ```
+
+       > 出力結果例
+
+       ```
+       Client: &version.Version{SemVer:"v2.14.0", GitCommit:"05811b84a3f93603dd6c2fcfe57944dfa7ab7fd0", GitTreeState:"clean"}
+       ```
+
+
+     * 確認内容
+     
+       バージョンの確認: 先行リリースの**v3.0.0ではない** かつ **v2.14.0** 以上
+
+
+     * 正常に成功していない場合の対策
+
+       * https://helm.sh/docs/using_helm/#installing-helm を参照し、個別にインストールしてください
+
 
 
    * git
@@ -149,12 +189,12 @@ IBM CloudとIKSクラスタの操作に必要なCLIツールのセットアッ�
     > Windowsユーザーの方は**コマンドプロンプト**を利用し、**管理者として実行**を行ってください。
 
     ```
+    # 標準アカウント
     $ ibmcloud login -a https://cloud.ibm.com
+    
+    # シングル・サインオン・アカウント（IBM社員など)
+    $ ibmcloud login -a https://cloud.ibm.com --sso
     ```
-
-    > シングルサインオン対応のアカウントをご利用の方は --ssoオプションを指定してください（IBM社員など)
-    > 
-    > `$ ibmcloud login -a https://cloud.ibm.com --sso`
 
     > Output
 
@@ -181,7 +221,7 @@ IBM CloudとIKSクラスタの操作に必要なCLIツールのセットアッ�
     4. eu-gb
     5. us-south
     6. us-east
-    Enter a number> 5                 < us-southを選択
+    Enter a number> 5                < us-southを選択。
     Targeted region us-south
 
 
