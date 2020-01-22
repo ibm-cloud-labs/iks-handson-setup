@@ -217,11 +217,12 @@ IBM CloudとIKSクラスタの操作に必要なCLIツールのセットアッ�
     Select a region (or press enter to skip):
     1. au-syd
     2. jp-tok
-    3. eu-de
-    4. eu-gb
-    5. us-south
-    6. us-east
-    Enter a number> 5                < us-southを選択。
+    3. kr-seo
+    4. eu-de
+    5. eu-gb
+    6. us-south
+    7. us-east
+    Enter a number> 6    # us-southの番号を選択。
     Targeted region us-south
 
 
