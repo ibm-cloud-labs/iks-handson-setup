@@ -142,24 +142,24 @@ IBM CloudとIKSクラスタの操作に必要なCLIツールのセットアッ�
      * コマンド
 
        ```
-       $ helm version --client
+       $ helm version
        ```
 
        > 出力結果例
 
        ```
-       Client: &version.Version{SemVer:"v2.14.0", GitCommit:"05811b84a3f93603dd6c2fcfe57944dfa7ab7fd0", GitTreeState:"clean"}
+       version.BuildInfo{Version:"v3.0.2", GitCommit:"19e47ee3283ae98139d98460de796c1be1e3975f", GitTreeState:"clean", GoVersion:"go1.13.5"}
        ```
 
 
      * 確認内容
      
-       バージョンの確認: 先行リリースの**v3.0.0ではない** かつ **v2.13.0** 以上
+       バージョンの確認: **v3.x.x ** とv3のバージョンであること。v2はサポートしていません。
 
 
      * 正常に成功していない場合の対策
 
-       * https://helm.sh/docs/using_helm/#installing-helm を参照し、個別にインストールしてください
+       * https://helm.sh/docs/intro/install/ を参照し、個別にインストールしてください
 
 
 
