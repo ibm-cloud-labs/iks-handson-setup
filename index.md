@@ -52,7 +52,7 @@ IBM CloudとIKSクラスタの操作に必要なCLIツールのセットアッ�
    * Windows 10 Pro の場合
 
     ```
-    # Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+    # [Net.ServicePointManager]::SecurityProtocol = "Tls12, Tls11, Tls, Ssl3"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')
     ```
 
     > Windows PowerShell アイコンを右クリックして、 **管理者として実行** を選択します。
@@ -68,7 +68,7 @@ IBM CloudとIKSクラスタの操作に必要なCLIツールのセットアッ�
        > 出力結果例
        
        ```
-       ibmcloud version 0.16.3+68cb57c-2019-06-20T09:16:21+00:00
+       ibmcloud version 1.1.0+cc908fe-2020-04-29T09:33:25+00:00
        ```
 
      * 確認内容
@@ -123,7 +123,7 @@ IBM CloudとIKSクラスタの操作に必要なCLIツールのセットアッ�
        > 出力結果例
 
        ```
-       Client Version: version.Info{Major:"1", Minor:"15", GitVersion:"v1.15.0", GitCommit:"e8462b5b5dc2584fdcd18e6bcfe9f1e4d970a529", GitTreeState:"clean", BuildDate:"2019-06-20T04:49:16Z", GoVersion:"go1.12.6", Compiler:"gc", Platform:"darwin/amd64"}
+       Client Version: version.Info{Major:"1", Minor:"15", GitVersion:"v1.15.5", GitCommit:"20c265fef0741dd71a66480e35bd69f18351daea", GitTreeState:"clean", BuildDate:"2019-10-15T19:16:51Z", GoVersion:"go1.12.10", Compiler:"gc", Platform:"darwin/amd64"}
        ```
 
 
@@ -174,7 +174,7 @@ IBM CloudとIKSクラスタの操作に必要なCLIツールのセットアッ�
        > 出力結果例
      
        ```
-       git version 2.20.1 (Apple Git-117)
+       git version 2.24.3 (Apple Git-128)
        ```
      
      * 正常に成功していない場合の対策
@@ -216,13 +216,14 @@ IBM CloudとIKSクラスタの操作に必要なCLIツールのセットアッ�
 
     Select a region (or press enter to skip):
     1. au-syd
-    2. jp-tok
-    3. kr-seo
-    4. eu-de
-    5. eu-gb
-    6. us-south
-    7. us-east
-    Enter a number> 6            < us-southの番号を選択。
+    2. in-che
+    3. jp-tok
+    4. kr-seo
+    5. eu-de
+    6. eu-gb
+    7. us-south
+    8. us-east
+    Enter a number> 7            < us-southの番号を選択。
     Targeted region us-south
 
 
