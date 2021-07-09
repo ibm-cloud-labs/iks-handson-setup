@@ -31,7 +31,6 @@ IBM Cloudにログインして、ワークショップで利用するIKSクラ�
 3. サービスの詳細画面にて「作成」ボタンを選択
 4. 以下のように選択・指定し，クラスターを作成します
    * クラスター・タイプ:  無料
-   * ロケーション:   North America
    * クラスター名:  mycluster
 
 ![iks-cluster-create](img/iks_cluster_create.gif)
